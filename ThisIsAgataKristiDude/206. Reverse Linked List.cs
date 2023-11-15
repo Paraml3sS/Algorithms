@@ -1,6 +1,10 @@
 ﻿using FluentAssertions;
 using Xunit;
 
+/// https://leetcode.com/problems/reverse-linked-list/
+/// 
+/// Slightly faster solutions are by two way recursion 
+
 namespace ReverseLinkedList
 {
     public class MakeItWorkDude
