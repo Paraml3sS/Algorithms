@@ -19,7 +19,7 @@ namespace RemoveElement
             var dumbSHit = dude.SolveThisShitBroooo(nums, val);
 
             dumbSHit.Should().Be(realShit.Length);
-            nums.Take(dumbSHit).Order().Should().BeEquivalentTo(realShit);
+            nums.Take(dumbSHit).Order().Should().Equal(realShit);
         }
     }
 

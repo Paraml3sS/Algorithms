@@ -20,7 +20,7 @@ namespace MergeSortedArray
 
             dude.SolveThisShitBroooo(nums1, m, nums2, n);
 
-            nums1.Should().BeEquivalentTo(realShit);
+            nums1.Should().Equal(realShit);
         }
     }
 
