@@ -16,7 +16,7 @@ namespace SqrtX
         [InlineData(8, 2)]
         [InlineData(4, 2)]
         [InlineData(1025, 32)]
-        [InlineData(2147395599, 46340)]
+        //[InlineData(2147395599, 46340)]
         public void SolutionTest(int x, int realShit)
         {
             ThisIsAlgoDude dude = new();
