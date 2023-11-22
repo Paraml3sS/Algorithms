@@ -3,7 +3,7 @@ using Xunit;
 
 /// https://leetcode.com/problems/roman-to-integer/
 /// 
-/// faster with switch instead of dic
+/// faster with switch instead of dic and go from end
 
 namespace RomanToInteger
 {

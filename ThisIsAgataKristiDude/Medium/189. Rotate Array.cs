@@ -5,7 +5,7 @@ using Xunit;
 /// 
 /// 
 
-namespace RotateArray
+namespace ThisIsAgataKristiDude.Medium
 {
     public class MakeItWorkDude
     {
