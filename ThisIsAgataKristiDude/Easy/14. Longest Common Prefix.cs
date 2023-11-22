@@ -4,7 +4,7 @@ using Xunit;
 /// https://leetcode.com/problems/longest-common-prefix
 /// 
 /// Lexicographic sorting allows to compare first and last
-/// mine can be simplified usiing foreach instead of for
+/// mine can be simplified usiing foreach instead of for (eliminate indices)
 
 namespace LongestCommonPrefix
 {
