@@ -10,7 +10,6 @@ namespace LongestCommonPrefix
 {
     public class MakeItWorkDude
     {
-
         [Theory]
         [InlineData(new string[] { "flower", "flow", "flight" }, "fl")]
         [InlineData(new string[] { "flower", "flower", "flower" }, "flower")]
