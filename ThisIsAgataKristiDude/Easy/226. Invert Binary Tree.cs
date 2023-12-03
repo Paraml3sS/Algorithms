@@ -20,7 +20,6 @@ namespace InvertBinaryTree
 
             dumbSHit.ToArray().Should().Equal([4, 7, 2, 9, 6, 3, 1]);
         }
-
     }
 
 

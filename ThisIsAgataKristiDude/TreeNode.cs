@@ -4,7 +4,7 @@ namespace ThisIsAgataKristiDude
 {
     public class TreeNode
     {
-        public int val;
+        public int? val;
         public TreeNode? left;
         public TreeNode? right;
         public TreeNode(int val = 0, TreeNode left = null, TreeNode right = null)
@@ -14,9 +14,9 @@ namespace ThisIsAgataKristiDude
             this.right = right;
         }
 
-        public TreeNode(int[] values, int index = 0) => Build(values, index);
+        public TreeNode(int?[] values, int index = 0) => Build(values, index);
 
-        private void Build(int[] values, int index = 0)
+        private void Build(int?[] values, int index = 0)
         {
             this.val = values[index];
             if (index * 2 + 1 < values.Length)
@@ -29,23 +29,26 @@ namespace ThisIsAgataKristiDude
             }
         }
 
-        public int[] ToArray() {
-            List<int> values = new(); int i = 0;
+        public int?[] ToArray()
+        {
+            List<int?> values = new() { this.val };
+            DirtyShawtyHelp(this.left, this.right, values);
 
-            AddToArray(this, values, ref i);
+            var lastNonNullValue = values.FindLastIndex(x => x.HasValue);
+            values.RemoveRange(lastNonNullValue, values.Count() - lastNonNullValue - 1);
 
             return values.ToArray();
-        } 
+        }
 
-        void AddToArray(TreeNode tree, List<int> values, ref int i)
+        private void DirtyShawtyHelp(TreeNode left, TreeNode right, List<int?> values)
         {
-            if (tree is null)
+            if (left is null && right is null)
                 return;
 
-            values.Add(tree.val);
-            ++i;
-            AddToArray(tree.left, values, ref i);
-            AddToArray(tree.right, values, ref i);
+            values.Add(left?.val); values.Add(right?.val);
+
+            DirtyShawtyHelp(left.left, left.right, values);
+            DirtyShawtyHelp(right.left, right.right, values);
         }
 
         public static TreeNode BuildDefaultTree()
